@@ -387,9 +387,40 @@ font-size:14px;
 <section id="contact" style="padding-top:25px; padding-bottom:50px;">
     <h2 style="margin-bottom:12px;">Contact</h2>
     <h2 style="margin-bottom:12px;"><a href="tel:8433336724" style="text-decoration:none; color:#ff4c4c;">📞 (843) 333-6724</a></h2>
-    <form action="https://api.web3forms.com/submit" method="POST">
-        <!-- If your form fields were here, you can add them, or let me know if you need the full form code! -->
-    </form>
+ <form action="https://api.web3forms.com/submit" method="POST" style="max-width: 500px; margin: 0 auto; padding: 20px; text-align: left;">
+    <!-- Replace YOUR_ACCESS_KEY_HERE with your actual Web3Forms key -->
+    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+
+    <div style="margin-bottom: 15px;">
+        <label for="name" style="display: block; margin-bottom: 5px;">Name:</label>
+        <input type="text" id="name" name="name" required style="width: 100%; padding: 8px; box-sizing: border-box;">
+    </div>
+
+    <div style="margin-bottom: 15px;">
+        <label for="email" style="display: block; margin-bottom: 5px;">Email:</label>
+        <input type="email" id="email" name="email" required style="width: 100%; padding: 8px; box-sizing: border-box;">
+    </div>
+
+    <div style="margin-bottom: 15px;">
+        <label for="message" style="display: block; margin-bottom: 5px;">Message:</label>
+        <textarea id="message" name="message" required style="width: 100%; height: 150px; padding: 8px; box-sizing: border-box; resize: vertical;"></textarea>
+    </div>
+
+    <div style="text-align: center;">
+        <button type="submit" style="padding: 10px 20px; cursor: pointer;">Submit Form</button>
+    </div>
+</form>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="message">Message:</label><br>
+    <textarea id="message" name="message" required></textarea><br><br>
+
+    <button type="submit">Submit Form</button>
+</form>
 </section>
 
 <footer>© 2026 QUANTUM LABS</footer>
