@@ -169,27 +169,29 @@ box-shadow:0 0 18px rgba(0,180,255,.10);
 max-width:760px;
 }
 
-.portfolio{
-    max-width:760px;
-    margin:45px auto 0;
+.portfolio {
+    max-width: 960px;
+    margin: 45px auto 0;
 }
-.portfolio-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:18px;
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 20px;
 }
-.portfolio-item{
-    background:#111b2e;
-    border:2px solid rgba(120,220,255,.30);
-    border-radius:18px;
-    padding:24px;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:flex-start;
-    text-align:center;
-    box-shadow:0 0 18px rgba(0,180,255,.10);
-    transition:.3s ease;
+
+.portfolio-item {
+    background: #111b2e;
+    border: 2px solid rgba(120,220,255,.30);
+    border-radius: 18px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* Changed from flex-start to fill the space beautifully */
+    text-align: center;
+    box-shadow: 0 0 18px rgba(0,180,255,.10);
+    transition: .3s ease;
 }
 .portfolio-item:hover{
     transform:translateY(-5px);
@@ -202,10 +204,12 @@ max-width:760px;
     margin-bottom:15px;
 }
 .split-preview img {
-    width:50%;
-    height:140px;
-    object-fit:cover;
-    border-radius:8px;
+    width: 50%;
+    height: 140px;
+    object-fit: contain; /* Prevents the flyers from cutting off */
+    background: #0b1528;  /* Blends empty space with your dark theme */
+    border-radius: 8px;
+}
 }
 footer{
 background:#000;
@@ -341,7 +345,7 @@ font-size:14px;
     <h2>Featured Projects</h2>
     <div class="portfolio-grid">
 
-        <!-- Row 1: Photo Restoration -->
+<!-- Row 1: Photo Restoration -->
         <a class="portfolio-item" href="photo-gallery.html" style="text-decoration:none; color:white;">
             <div class="split-preview">
                 <img src="dave-backlight.jpg" alt="Before Relighting">
@@ -367,11 +371,11 @@ font-size:14px;
             </div>
         </a>
 
-        <!-- Row 3: Creative Artwork (The Car) -->
+<!-- Row 3: Creative Artwork (The Car) -->
         <a class="portfolio-item" href="creative-gallery.html" style="text-decoration:none; color:white;">
             <div class="split-preview">
-                <img src="car-boring.jpg" alt="Before Creative Artwork">
-                <img src="car-dream.jpg" alt="After Creative Artwork">
+                <img src="elevate-gymnastics-campaigne.jpg" alt="Elevate Gymnastics Campaign">
+                <img src="resume-mastery.jpg" alt="Resume Mastery Campaign">
             </div>
             <div class="portfolio-text">
                 <h3>Creative Artwork</h3>
