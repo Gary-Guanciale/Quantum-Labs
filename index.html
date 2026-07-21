@@ -26,28 +26,34 @@ radial-gradient(circle at 80% 10%,rgba(0,120,255,.12),transparent 25%);
 header{
 text-align:center;
 background:linear-gradient(135deg,#0066ff,#00c6ff);
-}
-header h1{
-    font-size:7em;
-    font-weight:900;
-    letter-spacing:8px;
-    color:#fff;
-    text-transform:uppercase;
-    text-shadow:
-        0 3px 8px rgba(0,0,0,.25),
-        0 0 18px rgba(0,180,255,.25),
-        0 0 35px rgba(0,180,255,.12);
-    margin:0 0 18px 0;
-    transition:.35s ease;
+padding: 40px 20px;
 }
 
-header h1:hover{
-    transform:scale(1.03);
-    text-shadow:
-        0 3px 10px rgba(0,0,0,.3),
-        0 0 25px rgba(0,200,255,.45),
-        0 0 55px rgba(0,200,255,.25);
+/* CLEAN BORDERLESS LOGO SETUP */
+header .logo-container {
+    max-width: 900px;
+    width: 95%;
+    margin: 10px auto 25px auto;
+    display: block;
+    text-decoration: none;
+    transition: transform .35s ease;
 }
+
+header .logo-container img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    outline: none !important;
+    background: transparent !important;
+}
+
+header .logo-container:hover {
+    transform: scale(1.02);
+}
+
 .hero-subtitle{
     font-size:1.4rem;
     color:#cdefff;
@@ -213,11 +219,15 @@ max-width:760px;
 
 footer{
 background:#000;
-padding:2px 0 6px;
+padding:25px 0 15px;
 margin-top:0;
 text-align:center;
 color:#888;
 font-size:14px;
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 15px;
 }
 
 /* ---------- Mobile Optimization ---------- */
@@ -226,7 +236,7 @@ font-size:14px;
         overflow-x:hidden;
     }
     header{
-        padding:60px 20px 50px;
+        padding:50px 20px 40px;
         text-align:center;
         position:relative;
         overflow:hidden;
@@ -237,10 +247,8 @@ font-size:14px;
             inset 0 -40px 80px rgba(255,255,255,.08),
             0 0 80px rgba(0,170,255,.25);
     }
-    header h1{
-        font-size:3.3em;
-        letter-spacing:2px;
-        line-height:1.0;
+    header .logo-container {
+        max-width: 95%;
     }
     header p{
         font-size:1.05em;
@@ -301,7 +309,11 @@ font-size:14px;
 <body>
 
 <header>
-<h1>QUANTUM LABS</h1>
+<!-- HEADER LOGO BANNER (ql-logo.jpg) -->
+<a href="index.html" class="logo-container">
+    <img src="ql-logo.jpg" alt="Quantum Labs | AI Research & Photo Restoration">
+</a>
+
 <p class="hero-subtitle">AI-Powered Research • Professional Photo Restoration • AI Visualization • Marketing Graphics</p>
 
 <div class="hero-box">
@@ -345,7 +357,7 @@ font-size:14px;
     <h2>Featured Projects</h2>
     <div class="portfolio-grid">
 
-<!-- Row 1: Photo Restoration -->
+        <!-- Row 1: Photo Restoration -->
         <a class="portfolio-item" href="photo-gallery.html" style="text-decoration:none; color:white;">
             <div class="split-preview">
                 <img src="dave-backlight.jpg" alt="Before Relighting">
@@ -371,7 +383,7 @@ font-size:14px;
             </div>
         </a>
 
-<!-- Row 3: Creative Artwork (The Car) -->
+        <!-- Row 3: Creative Artwork -->
         <a class="portfolio-item" href="creative-gallery.html" style="text-decoration:none; color:white;">
             <div class="split-preview">
                 <img src="elevate-gymnastics-campaigne.jpg" alt="Elevate Gymnastics Campaign">
@@ -380,7 +392,7 @@ font-size:14px;
             <div class="portfolio-text">
                 <h3>Creative Artwork</h3>
                 <p>AI artwork &amp; graphics</p>
-                <div class="gallery-link">View Gallery →</div>
+                <div class="gallery-link">View Gallery &rarr;</div>
             </div>
         </a>
         
@@ -415,7 +427,12 @@ font-size:14px;
 </form>
 </section>
 
-<footer>© 2026 QUANTUM LABS</footer>
+<!-- FOOTER LOGO (dark-ql-logo.jpg) -->
+<footer>
+    <img src="dark-ql-logo.jpg" alt="Quantum Labs Seal" style="max-width:130px; width:100%; border-radius:10px;">
+    <div>© 2026 QUANTUM LABS</div>
+</footer>
+
 <script src="script.js"></script>
 </body>
 </html>

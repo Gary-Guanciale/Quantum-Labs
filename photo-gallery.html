@@ -1,112 +1,101 @@
+HTML
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Photo Restoration & Enhancement Gallery | Quantum Labs</title>
+<title>Photo Restoration & Enhancement | Quantum Labs</title>
+<link rel="stylesheet" href="styles.css">
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #050814;
-    color: #fff;
-    margin: 0;
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#050814;
+    color:#fff;
+    margin:0;
     background-image:
-        radial-gradient(circle at 20% 20%, rgba(0, 180, 255, .18), transparent 25%),
-        radial-gradient(circle at 80% 10%, rgba(0, 120, 255, .12), transparent 25%);
+        radial-gradient(circle at 20% 20%,rgba(0,180,255,.18),transparent 25%),
+        radial-gradient(circle at 80% 10%,rgba(0,120,255,.12),transparent 25%);
 }
-
-header {
-    text-align: center;
-    background: linear-gradient(135deg, #0066ff, #00c6ff);
-    padding: 40px 20px;
+header{
+    text-align:center;
+    background:linear-gradient(135deg,#0066ff,#00c6ff);
+    padding: 30px 20px;
 }
-
-header h1 {
-    font-size: 3.5em;
-    font-weight: 900;
-    color: #fff;
+header h1{
+    font-size: 2.2rem;
     margin-bottom: 10px;
-    text-shadow: 0 3px 8px rgba(0, 0, 0, .25);
 }
-
-.back-link {
-    color: #cdefff;
+header a{
+    color: #e0f4ff;
     text-decoration: none;
-    font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 0.95rem;
 }
-
-.back-link:hover {
+header a:hover{
     text-decoration: underline;
 }
 
-section {
+.gallery-container {
     max-width: 900px;
-    margin: auto;
-    padding: 50px 25px;
-}
-
-.gallery-grid {
+    margin: 40px auto;
+    padding: 0 20px;
     display: flex;
     flex-direction: column;
-    gap: 35px;
+    gap: 40px;
 }
 
-.gallery-item {
-    background: #111b2e;
-    border: 1px solid rgba(120, 220, 255, .2);
-    border-radius: 12px;
-    padding: 30px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, .3);
+.gallery-card {
+    background: #0d1527;
+    border: 1px solid rgba(120,220,255,.25);
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.4);
 }
 
-.gallery-item h3 {
-    font-size: 1.8em;
+.gallery-card h2 {
+    font-size: 1.5rem;
     color: #5fd8ff;
     margin-bottom: 8px;
 }
 
-.gallery-item p {
-    color: #cbd5e1;
-    font-size: 1.1em;
+.gallery-card p {
+    color: #cdefff;
+    font-size: 0.95rem;
     margin-bottom: 20px;
 }
 
-.split-preview {
+.split-image-container {
     display: flex;
-    width: 100%;
-    height: 400px; /* Gives the photos plenty of room to show detail */
-    overflow: hidden;
-    background: #050814;
-    border: 1px solid rgba(120, 220, 255, .2);
-    border-radius: 8px;
+    gap: 15px;
 }
 
-.split-preview img {
+.split-image-container img {
     width: 50%;
-    height: 100%;
+    height: auto;
+    border-radius: 8px;
     object-fit: cover;
 }
 
-footer {
-    background: #000;
-    padding: 25px 0;
-    margin-top: 60px;
-    text-align: center;
-    color: #888;
-    font-size: 14px;
+footer{
+    background:#000;
+    padding:25px 0 15px;
+    margin-top:50px;
+    text-align:center;
+    color:#888;
+    font-size:14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
 }
 
-/* Mobile Layout Fix */
-@media (max-width: 768px) {
-    header h1 { font-size: 2.2em; }
-    .split-preview { height: 220px; }
+@media (max-width: 600px) {
+    .split-image-container {
+        flex-direction: column;
+    }
+    .split-image-container img {
+        width: 100%;
+    }
 }
 </style>
 </head>
@@ -114,39 +103,37 @@ footer {
 
 <header>
     <h1>Photo Restoration &amp; Enhancement</h1>
-    <a href="index.html" class="back-link">← Return to Quantum Labs</a>
+    <a href="index.html">&larr; Return to Home</a>
 </header>
 
-<main>
-    <section>
-        <div class="gallery-grid">
-            
-           <!-- Sky Restoration -->
-<div class="gallery-item">
-    <h3>Photo Restoration</h3>
-    <p>Recovered detail from an overexposed sky while naturally brightening the subjects.</p>
-    <div class="split-preview">
-        <img src="dave-backlight.jpg" alt="Before Sky Restoration">
-        <img src="dave-blue-sky.jpg" alt="After Sky Restoration">
+<div class="gallery-container">
+
+    <!-- PROJECT 1 -->
+    <div class="gallery-card">
+        <h2>Photo Restoration</h2>
+        <p>Recovered detail from an overexposed sky while naturally brightening the subjects.</p>
+        <div class="split-image-container">
+            <img src="dave-backlight.jpg" alt="Overexposed Sky Original">
+            <img src="dave-blue-sky.jpg" alt="Restored Sky and Lighting">
+        </div>
     </div>
+
+    <!-- PROJECT 2 -->
+    <div class="gallery-card">
+        <h2>Portrait Enhancement</h2>
+        <p>Removed blemishes while preserving realistic skin texture.</p>
+        <div class="split-image-container">
+            <img src="meth-girl.jpg" alt="Before Portrait Enhancement">
+            <img src="meth-girl-fixed.jpg" alt="After Portrait Enhancement">
+        </div>
+    </div>
+
 </div>
 
-            <!-- Portrait Enhancement -->
-            <div class="gallery-item">
-                <h3>Portrait Enhancement</h3>
-                <p>Removed blemishes while preserving realistic skin texture.</p>
-                <div class="split-preview">
-                    <img src="meth-girl.jpg" alt="Before Skin Restoration">
-                    <img src="meth-girl-fixed.jpg" alt="After Skin Restoration">
-                </div>
-            </div>
-
-            
-        </div>
-    </section>
-</main>
-
-<footer>© 2026 QUANTUM LABS</footer>
+<footer>
+    <img src="dark-ql-logo.jpg" alt="Quantum Labs Seal" style="max-width:130px; width:100%; border-radius:10px;">
+    <div>© 2026 QUANTUM LABS</div>
+</footer>
 
 </body>
 </html>

@@ -4,115 +4,96 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AI Visualization | Quantum Labs</title>
+<link rel="stylesheet" href="styles.css">
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #050814;
-    color: #fff;
-    margin: 0;
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#050814;
+    color:#fff;
+    margin:0;
     background-image:
-        radial-gradient(circle at 20% 20%, rgba(0, 180, 255, .18), transparent 25%),
-        radial-gradient(circle at 80% 10%, rgba(0, 120, 255, .12), transparent 25%);
+        radial-gradient(circle at 20% 20%,rgba(0,180,255,.18),transparent 25%),
+        radial-gradient(circle at 80% 10%,rgba(0,120,255,.12),transparent 25%);
 }
-
-header {
-    text-align: center;
-    background: linear-gradient(135deg, #0066ff, #00c6ff);
-    padding: 40px 20px;
+header{
+    text-align:center;
+    background:linear-gradient(135deg,#0066ff,#00c6ff);
+    padding: 30px 20px;
 }
-
-header h1 {
-    font-size: 3.5em;
-    font-weight: 900;
-    color: #fff;
+header h1{
+    font-size: 2.2rem;
     margin-bottom: 10px;
-    text-shadow: 0 3px 8px rgba(0, 0, 0, .25);
 }
-
-.back-link {
-    color: #cdefff;
+header a{
+    color: #e0f4ff;
     text-decoration: none;
-    font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 0.95rem;
 }
-
-.back-link:hover {
+header a:hover{
     text-decoration: underline;
 }
 
-/* --- Core Structure & Image Fixes --- */
-section {
+.gallery-container {
     max-width: 900px;
-    margin: 0 auto;
-    padding: 50px 25px;
-}
-
-.gallery-grid {
+    margin: 40px auto;
+    padding: 0 20px;
     display: flex;
     flex-direction: column;
-    gap: 45px;
+    gap: 40px;
 }
 
-.gallery-item {
-    background: #111b2e;
-    border: 1px solid rgba(120, 220, 255, .2);
-    border-radius: 12px;
-    padding: 24px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, .3);
+.gallery-card {
+    background: #0d1527;
+    border: 1px solid rgba(120,220,255,.25);
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.4);
 }
 
-.gallery-item h3 {
-    font-size: 1.5em;
+.gallery-card h2 {
+    font-size: 1.5rem;
+    color: #5fd8ff;
     margin-bottom: 8px;
 }
 
-.gallery-item p {
+.gallery-card p {
     color: #cdefff;
-    font-size: 1.1rem;
+    font-size: 0.95rem;
     margin-bottom: 20px;
 }
 
-.split-preview {
+.split-image-container {
     display: flex;
-    gap: 12px;
-    width: 100%;
+    gap: 15px;
 }
 
-.split-preview img {
+.split-image-container img {
     width: 50%;
     height: auto;
-    max-height: 320px;
-    object-fit: contain;
     border-radius: 8px;
-    background: #0b1528;
-    display: block;
-    margin: 0 auto;
+    object-fit: cover;
 }
 
-footer {
-    background: #000;
-    padding: 25px 0;
-    margin-top: 60px;
-    text-align: center;
-    color: #888;
-    font-size: 14px;
+footer{
+    background:#000;
+    padding:25px 0 15px;
+    margin-top:50px;
+    text-align:center;
+    color:#888;
+    font-size:14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
 }
 
-@media (max-width: 768px) {
-    header h1 { font-size: 2.2em; }
-    .split-preview { 
+@media (max-width: 600px) {
+    .split-image-container {
         flex-direction: column;
-        height: auto; 
     }
-    .split-preview img {
+    .split-image-container img {
         width: 100%;
-        max-height: none;
     }
 }
 </style>
@@ -121,48 +102,47 @@ footer {
 
 <header>
     <h1>AI Visualization</h1>
-    <a href="index.html" class="back-link">← Return to Quantum Labs</a>
+    <a href="index.html">&larr; Return to Home</a>
 </header>
 
-<main>
-    <section>
-        <div class="gallery-grid">
-            
-            <!-- Renovation Concepts (Houses) -->
-            <div class="gallery-item">
-                <h3>Renovation Concepts</h3>
-                <p>Visualize renovation concepts before construction begins.</p>
-                <div class="split-preview">
-                    <img src="old-house.jpg" alt="Before House Visualization">
-                    <img src="old-house-renovated.jpg" alt="After House Visualization">
-                </div>
-            </div>
+<div class="gallery-container">
 
-            <!-- Abandoned House Transformation -->
-            <div class="gallery-item">
-                <h3>Estate Renovation</h3>
-                <p>See dramatic modern transformations for historical or distressed properties.</p>
-                <div class="split-preview">
-                    <img src="abandoned-house.jpg" alt="Before AI Estate Transformation">
-                    <img src="restored-abandoned-house.jpg" alt="After AI Estate Transformation">
-                </div>
-            </div>
-
-            <!-- Boat Restoration -->
-            <div class="gallery-item">
-                <h3>Scenic Enhancements & Colorization</h3>
-                <p>Bring vivid color, clarity, and life back to classic landscape and harbor photography.</p>
-                <div class="split-preview">
-                    <img src="old-boat-pic.jpg" alt="Before Scenery Restoration">
-                    <img src="restored-boat-pic.jpg" alt="After Scenery Restoration">
-                </div>
-            </div>
-            
+    <!-- PROJECT 1 -->
+    <div class="gallery-card">
+        <h2>House Renovation Concept</h2>
+        <p>See renovation concepts before breaking ground.</p>
+        <div class="split-image-container">
+            <img src="old-house.jpg" alt="Before Renovation Concept">
+            <img src="old-house-renovated.jpg" alt="After AI Renovation Concept">
         </div>
-    </section>
-</main>
+    </div>
 
-<footer>© 2026 QUANTUM LABS</footer>
+    <!-- PROJECT 2 -->
+    <div class="gallery-card">
+        <h2>Estate Renovation</h2>
+        <p>See dramatic modern transformations for historical or distressed properties.</p>
+        <div class="split-image-container">
+            <img src="abandoned-house.jpg" alt="Before Estate Renovation">
+            <img src="restored-abandoned-house.jpg" alt="After Estate Renovation">
+        </div>
+    </div>
+
+    <!-- PROJECT 3 -->
+    <div class="gallery-card">
+        <h2>Scenic Enhancements &amp; Colorization</h2>
+        <p>Bring vivid color, clarity, and life back to classic landscape and harbor photography.</p>
+        <div class="split-image-container">
+            <img src="old-boat-pic.jpg" alt="Original Black and White Harbor Photo">
+            <img src="restored-boat-pic.jpg" alt="Colorized Harbor Photo">
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <img src="dark-ql-logo.jpg" alt="Quantum Labs Seal" style="max-width:130px; width:100%; border-radius:10px;">
+    <div>© 2026 QUANTUM LABS</div>
+</footer>
 
 </body>
 </html>
