@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Marketing Graphics & Creative Design | Quantum Labs</title>
+<meta name="description" content="Quantum Labs Creative Design & Marketing Graphics Gallery - Elevate Gymnastics, Wedding Mall of NY, and Resume Mastery campaigns.">
+<title>Creative Artwork & Marketing Graphics | Quantum Labs</title>
 <link rel="stylesheet" href="styles.css">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -21,17 +22,33 @@ header{
     background:linear-gradient(135deg,#0066ff,#00c6ff);
     padding: 30px 20px;
 }
-header h1{
-    font-size: 2.2rem;
-    margin-bottom: 10px;
-}
-header a{
-    color: #e0f4ff;
+header .logo-container {
+    max-width: 900px;
+    width: 95%;
+    margin: 0 auto 15px auto;
+    display: block;
     text-decoration: none;
-    font-size: 0.95rem;
 }
-header a:hover{
-    text-decoration: underline;
+header .logo-container img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border: none !important;
+}
+.back-btn {
+    display: inline-block;
+    margin-top: 10px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    background: rgba(0,25,60,.4);
+    padding: 8px 18px;
+    border-radius: 20px;
+    border: 1px solid rgba(120,220,255,.5);
+    transition: .3s;
+}
+.back-btn:hover {
+    background: rgba(0,180,255,.3);
 }
 
 .gallery-container {
@@ -40,29 +57,28 @@ header a:hover{
     padding: 0 20px;
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 35px;
 }
 
 .gallery-card {
-    background: #0d1527;
-    border: 1px solid rgba(120,220,255,.25);
-    border-radius: 16px;
+    background: #111b2e;
+    border: 2px solid rgba(120,220,255,.30);
+    border-radius: 18px;
     padding: 25px;
-    box-shadow: 0 10px 30px rgba(0,0,0,.4);
     text-align: center;
+    box-shadow: 0 0 18px rgba(0,180,255,.10);
 }
 
-.gallery-card h2 {
-    font-size: 1.5rem;
-    color: #fff;
+.gallery-card h3 {
+    color: #5fd8ff;
+    font-size: 1.6rem;
     margin-bottom: 20px;
-    text-align: left;
 }
 
 .gallery-card img {
     max-width: 100%;
     height: auto;
-    border-radius: 10px;
+    border-radius: 12px;
     display: block;
     margin: 0 auto;
 }
@@ -84,34 +100,36 @@ footer{
 <body>
 
 <header>
-    <h1>Marketing Graphics &amp; Creative Design</h1>
-    <a href="index.html">&larr; Return to Home</a>
+    <a href="index.html" class="logo-container">
+        <img src="ql-logo.png" alt="Quantum Labs">
+    </a>
+    <a href="index.html" class="back-btn">&larr; Back to Home</a>
 </header>
 
 <div class="gallery-container">
 
-    <!-- CAMPAIGN 1: ELEVATE GYMNASTICS -->
+    <!-- Campaign 1: Elevate Gymnastics -->
     <div class="gallery-card">
-        <h2>Elevate Gymnastics Campaign</h2>
+        <h3>Elevate Gymnastics Campaign</h3>
         <img src="elevate-gymnastics-campaigne.jpg" alt="Elevate Gymnastics Campaign">
     </div>
 
-    <!-- CAMPAIGN 2: THE WEDDING MALL OF NY -->
+    <!-- Campaign 2: The Wedding Mall of NY Logo -->
     <div class="gallery-card">
-        <h2>The Wedding Mall of NY Logo</h2>
+        <h3>The Wedding Mall of NY Logo</h3>
         <img src="TWM-logo.jpg" alt="The Wedding Mall of NY Logo">
     </div>
 
-    <!-- CAMPAIGN 3: RESUME MASTERY -->
+    <!-- Campaign 3: Resume Mastery Campaign -->
     <div class="gallery-card">
-        <h2>Resume Mastery Campaign</h2>
+        <h3>Resume Mastery Campaign</h3>
         <img src="resume-mastery.jpg" alt="Resume Mastery Campaign">
     </div>
 
 </div>
 
 <footer>
-    <img src="dark-ql-logo.jpg" alt="Quantum Labs Seal" style="max-width:130px; width:100%; border-radius:10px;">
+    <img src="ql-logo.png" alt="Quantum Labs Seal" style="max-width:130px; width:100%; border-radius:10px;">
     <div>© 2026 QUANTUM LABS</div>
 </footer>
 
