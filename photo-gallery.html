@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Photo Restoration & Enhancement | Quantum Labs</title>
+<meta name="description" content="Quantum Labs Photo Restoration Gallery - Before and after photo restoration and enhancement examples.">
+<title>Photo Restoration Gallery | Quantum Labs</title>
 <link rel="stylesheet" href="styles.css">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -21,58 +22,87 @@ header{
     background:linear-gradient(135deg,#0066ff,#00c6ff);
     padding: 30px 20px;
 }
-header h1{
-    font-size: 2.2rem;
-    margin-bottom: 10px;
-}
-header a{
-    color: #e0f4ff;
+header .logo-container {
+    max-width: 900px;
+    width: 95%;
+    margin: 0 auto 15px auto;
+    display: block;
     text-decoration: none;
-    font-size: 0.95rem;
 }
-header a:hover{
-    text-decoration: underline;
+header .logo-container img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border: none !important;
+}
+.back-btn {
+    display: inline-block;
+    margin-top: 10px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    background: rgba(0,25,60,.4);
+    padding: 8px 18px;
+    border-radius: 20px;
+    border: 1px solid rgba(120,220,255,.5);
+    transition: .3s;
+}
+.back-btn:hover {
+    background: rgba(0,180,255,.3);
 }
 
 .gallery-container {
-    max-width: 900px;
+    max-width: 960px;
     margin: 40px auto;
     padding: 0 20px;
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 35px;
 }
 
 .gallery-card {
-    background: #0d1527;
-    border: 1px solid rgba(120,220,255,.25);
-    border-radius: 16px;
+    background: #111b2e;
+    border: 2px solid rgba(120,220,255,.30);
+    border-radius: 18px;
     padding: 25px;
-    box-shadow: 0 10px 30px rgba(0,0,0,.4);
+    text-align: center;
+    box-shadow: 0 0 18px rgba(0,180,255,.10);
 }
 
-.gallery-card h2 {
-    font-size: 1.5rem;
+.gallery-card h3 {
     color: #5fd8ff;
-    margin-bottom: 8px;
-}
-
-.gallery-card p {
-    color: #cdefff;
-    font-size: 0.95rem;
+    font-size: 1.6rem;
     margin-bottom: 20px;
 }
 
-.split-image-container {
+.split-preview {
     display: flex;
     gap: 15px;
+    width: 100%;
+    justify-content: center;
 }
 
-.split-image-container img {
+.split-preview div {
     width: 50%;
-    height: auto;
-    border-radius: 8px;
-    object-fit: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.split-preview img {
+    width: 100%;
+    height: 320px;
+    object-fit: contain;
+    background: #0b1528;
+    border-radius: 12px;
+    border: 1px solid rgba(120,220,255,.2);
+}
+
+.split-preview span {
+    margin-top: 8px;
+    color: #cdefff;
+    font-size: 0.95rem;
+    font-weight: bold;
 }
 
 footer{
@@ -88,11 +118,12 @@ footer{
     gap: 15px;
 }
 
-@media (max-width: 600px) {
-    .split-image-container {
+@media (max-width: 768px) {
+    .split-preview {
         flex-direction: column;
+        gap: 15px;
     }
-    .split-image-container img {
+    .split-preview div {
         width: 100%;
     }
 }
@@ -101,32 +132,57 @@ footer{
 <body>
 
 <header>
-    <h1>Photo Restoration &amp; Enhancement</h1>
-    <a href="index.html">&larr; Return to Home</a>
+    <a href="index.html" class="logo-container">
+        <img src="ql-logo.jpg" alt="Quantum Labs">
+    </a>
+    <a href="index.html" class="back-btn">&larr; Back to Home</a>
 </header>
 
 <div class="gallery-container">
-
-    <!-- PROJECT 1 -->
+    <!-- Restoration Project 1: Dave Relighting -->
     <div class="gallery-card">
-        <h2>Photo Restoration</h2>
-        <p>Recovered detail from an overexposed sky while naturally brightening the subjects.</p>
-        <div class="split-image-container">
-            <img src="dave-backlight.jpg" alt="Overexposed Sky Original">
-            <img src="dave-blue-sky.jpg" alt="Restored Sky and Lighting">
+        <h3>Photo Relighting &amp; Enhancement</h3>
+        <div class="split-preview">
+            <div>
+                <img src="dave-backlight.jpg" alt="Before Relighting">
+                <span>Before</span>
+            </div>
+            <div>
+                <img src="dave-blue-sky.jpg" alt="After Relighting">
+                <span>After</span>
+            </div>
         </div>
     </div>
 
-    <!-- PROJECT 2 -->
+    <!-- Restoration Project 2: Pauline Portrait -> Severe Damage Restoration -->
     <div class="gallery-card">
-        <h2>Portrait Enhancement</h2>
-        <p>Removed blemishes while preserving realistic skin texture.</p>
-        <div class="split-image-container">
-            <img src="meth-girl.jpg" alt="Before Portrait Enhancement">
-            <img src="meth-girl-fixed.jpg" alt="After Portrait Enhancement">
+        <h3>Severe Damage Restoration</h3>
+        <div class="split-preview">
+            <div>
+                <img src="pauline-original.jpg" alt="Original Damaged Photo">
+                <span>Before (Original)</span>
+            </div>
+            <div>
+                <img src="pauline-restored.jpg" alt="Restored Portrait">
+                <span>After (Restored)</span>
+            </div>
         </div>
     </div>
 
+    <!-- Restoration Project 3: Meth Girl -> Portrait Restoration -->
+    <div class="gallery-card">
+        <h3>Portrait Restoration</h3>
+        <div class="split-preview">
+            <div>
+                <img src="meth-girl.jpg" alt="Meth Girl Original">
+                <span>Before</span>
+            </div>
+            <div>
+                <img src="meth-girl-fixed.jpg" alt="Meth Girl Fixed">
+                <span>After</span>
+            </div>
+        </div>
+    </div>
 </div>
 
 <footer>
