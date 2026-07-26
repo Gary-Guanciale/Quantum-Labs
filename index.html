@@ -26,14 +26,19 @@ radial-gradient(circle at 80% 10%,rgba(0,120,255,.12),transparent 25%);
 header{
 text-align:center;
 background:linear-gradient(135deg,#0066ff,#00c6ff);
-padding: 40px 20px;
+padding: 10px 20px 40px;
 }
 
-/* CLEAN BORDERLESS LOGO SETUP */
-header .logo-container {
+/* LOGO OVERLAY CONTAINER */
+.logo-overlay-container {
+    position: relative;
     max-width: 900px;
     width: 95%;
-    margin: 10px auto 25px auto;
+    margin: 5px auto 4px auto;
+    display: block;
+}
+
+header .logo-container {
     display: block;
     text-decoration: none;
     transition: transform .35s ease;
@@ -48,18 +53,29 @@ header .logo-container img {
     box-shadow: none !important;
     outline: none !important;
     background: transparent !important;
+    display: block;
 }
 
 header .logo-container:hover {
     transform: scale(1.02);
 }
 
+/* SUPERIMPOSED SUBTITLE */
 .hero-subtitle{
-    font-size:1.4rem;
-    color:#cdefff;
-    margin:20px 0 30px;
-    letter-spacing:1px;
+    position: absolute;
+    bottom: 8%; /* Adjust this percentage to move the text up or down on the logo */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    font-size: 1.3rem;
+    color: #ffffff;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.8), 0 0 12px rgba(0,0,0,0.6);
+    letter-spacing: 0.8px;
+    z-index: 2;
+    pointer-events: none;
+    margin: 0;
 }
+
 .hero-box{
     max-width:760px;
     margin:45px auto 25px;
@@ -103,11 +119,6 @@ header .logo-container:hover {
 .hero-button:hover{
     transform:translateY(-4px);
     box-shadow:0 12px 30px rgba(0,212,255,.4);
-}
-header p{
-font-size:1.8em;
-margin-bottom:20px;
-color:#000;
 }
 
 .tagline-box {
@@ -236,7 +247,7 @@ gap: 15px;
         overflow-x:hidden;
     }
     header{
-        padding:50px 20px 40px;
+        padding:30px 15px 30px;
         text-align:center;
         position:relative;
         overflow:hidden;
@@ -247,12 +258,12 @@ gap: 15px;
             inset 0 -40px 80px rgba(255,255,255,.08),
             0 0 80px rgba(0,170,255,.25);
     }
-    header .logo-container {
+    .logo-overlay-container {
         max-width: 95%;
     }
-    header p{
-        font-size:1.05em;
-        margin-bottom:14px;
+    .hero-subtitle{
+        font-size:0.85rem;
+        bottom: 6%;
     }
     .tagline-box{
         width:95%;
@@ -295,26 +306,18 @@ gap: 15px;
         padding:16px !important;
     }
 }
-
-@keyframes shimmer{
-    0%{
-        background-position:-250% 0;
-    }
-    100%{
-        background-position:250% 0;
-    }
-}
 </style>
 </head>
 <body>
 
 <header>
-<!-- HEADER LOGO BANNER (ql-logo.jpg) -->
-<a href="index.html" class="logo-container">
-    <img src="ql-logo.jpg" alt="Quantum Labs | AI Research & Photo Restoration">
-</a>
-
-<p class="hero-subtitle">AI-Powered Research • Professional Photo Restoration • AI Visualization • Marketing Graphics</p>
+<!-- HEADER LOGO WITH OVERLAID SUBTITLE -->
+<div class="logo-overlay-container">
+    <a href="index.html" class="logo-container">
+        <img src="ql-logo.jpg" alt="Quantum Labs | AI Research & Photo Restoration">
+    </a>
+    <p class="hero-subtitle">AI-Powered Research • Professional Photo Restoration • AI Visualization • Marketing Graphics</p>
+</div>
 
 <div class="hero-box">
     <h2>Helping Small Businesses Look Like Big Businesses</h2>
