@@ -63,22 +63,43 @@ header .logo-container:hover {
 /* SUPERIMPOSED SUBTITLE */
 .hero-subtitle{
     position: absolute;
-    bottom: 8%; /* Adjust this percentage to move the text up or down on the logo */
+    bottom: 4%;
     left: 50%;
     transform: translateX(-50%);
     width: 90%;
-    font-size: 1.3rem;
+    font-size: 1.15rem;
     color: #ffffff;
     text-shadow: 0 2px 6px rgba(0,0,0,0.8), 0 0 12px rgba(0,0,0,0.6);
     letter-spacing: 0.8px;
     z-index: 2;
     pointer-events: none;
     margin: 0;
+    text-align: center;
+    line-height: 1.1;
+}
+
+.hero-subtitle span {
+    display: inline-block;
+    margin: 1px 0;
+}
+
+/* CLEAN GRAPHIC DIVIDERS (NO SHADOWS) */
+.hero-subtitle span::before,
+.hero-subtitle span::after {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: #001a33;
+    border: 2px solid #33ccff;
+    border-radius: 50%;
+    margin: 0 14px;
+    vertical-align: middle;
 }
 
 .hero-box{
     max-width:760px;
-    margin:45px auto 25px;
+    margin:15px auto 25px;
     padding:45px;
     background:rgba(10,35,70,.45);
     backdrop-filter:blur(18px);
@@ -265,6 +286,12 @@ gap: 15px;
         font-size:0.85rem;
         bottom: 6%;
     }
+    .hero-subtitle span::before,
+    .hero-subtitle span::after {
+        width: 12px;
+        height: 12px;
+        margin: 0 6px;
+    }
     .tagline-box{
         width:95%;
         max-width:95%;
@@ -316,7 +343,11 @@ gap: 15px;
     <a href="index.html" class="logo-container">
         <img src="ql-logo.jpg" alt="Quantum Labs | AI Research & Photo Restoration">
     </a>
-    <p class="hero-subtitle">AI-Powered Research • Professional Photo Restoration • AI Visualization • Marketing Graphics</p>
+    <p class="hero-subtitle">
+        <span>AI-Powered Research & Visualization</span><br>
+        <span>Professional Photo Restoration</span><br>
+        <span>Digital Marketing Graphics</span>
+    </p>
 </div>
 
 <div class="hero-box">
