@@ -284,6 +284,29 @@ max-width:760px;
     transform:translateY(-5px);
     box-shadow:0 8px 25px rgba(0,191,255,.2);
 }
+.portfolio-gallery-link {
+    display: block;
+    width: 100%;
+    color: white;
+    text-decoration: none;
+}
+.photo-restoration-pay-button {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 12px 18px;
+    border: 1px solid #6ee7ff;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #0077cc, #00bfff);
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 4px 14px rgba(0,191,255,.30);
+    transition: .3s ease;
+}
+.photo-restoration-pay-button:hover {
+    background: linear-gradient(135deg, #008de6, #20cfff);
+    box-shadow: 0 6px 18px rgba(0,191,255,.45);
+}
 .split-preview {
     display:flex;
     gap:8px;
@@ -477,17 +500,20 @@ gap: 15px;
     <div class="portfolio-grid">
 
         <!-- Row 1: Photo Restoration -->
-        <a class="portfolio-item" href="photo-gallery.html" style="text-decoration:none; color:white;">
-            <div class="split-preview">
-                <img src="dave-backlight.jpg" alt="Before Relighting">
-                <img src="dave-blue-sky.jpg" alt="After Relighting">
-            </div>
-            <div class="portfolio-text">
-                <h3>Photo Restoration &amp; Enhancement</h3>
-                <p>Professional photo restoration.</p>
-                <div class="gallery-link">View Gallery +</div>
-            </div>
-        </a>
+        <div class="portfolio-item">
+            <a class="portfolio-gallery-link" href="photo-gallery.html">
+                <div class="split-preview">
+                    <img src="dave-backlight.jpg" alt="Before Relighting">
+                    <img src="dave-blue-sky.jpg" alt="After Relighting">
+                </div>
+                <div class="portfolio-text">
+                    <h3>Photo Restoration &amp; Enhancement</h3>
+                    <p>Professional photo restoration.</p>
+                    <div class="gallery-link">View Gallery +</div>
+                </div>
+            </a>
+            <a class="photo-restoration-pay-button" href="https://buy.stripe.com/4gM7sDfLzg9b4OG97J5sA00" target="_blank" rel="noopener">Restore My Photo &mdash; $25/photo</a>
+        </div>
 
         <!-- Row 2: AI Visualization (The Houses) -->
         <a class="portfolio-item" href="ai-gallery.html" style="text-decoration:none; color:white;">
